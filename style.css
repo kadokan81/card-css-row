@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	position: relative;
+	height: 100vh;
+	color: #eee;
+	background: #000000 no-repeat;
+	font-family: 'Roboto';
+}
+.cart-row {
+	display: flex;
+	padding: 3rem;
+	margin-top: 5rem;
+	position: relative;
+}
+/* *::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*:-webkit-scrollbar-thumb {
+	background: #c48f51;
+	border-radius: 10px;
+	box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+		inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+*::-webkit-scrollbar-track {
+	background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+} */
+.cart {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	width: 400px;
+	min-width: 250px;
+	height: 350px;
+	padding: 1.5rem;
+	border-radius: 16px;
+	background-color: rgb(39, 36, 36);
+	box-shadow: -1rem 0 3rem #000000;
+
+	transition: 0.3s;
+	overflow: hidden;
+}
+.cart-header {
+}
+
+.cart-time {
+	margin-bottom: 20px;
+}
+.cart-title {
+}
+.cart:hover {
+	transform: translateY(-1rem);
+}
+.cart:hover ~ .cart {
+	transform: translateX(130px);
+}
+.cart:not(:first-child) {
+	margin-left: -130px;
+}
+
+.card-author {
+	position: relative;
+	display: grid;
+	grid-template-columns: 75px 1fr;
+	align-items: center;
+	margin: 2rem 0 0;
+}
+.author-avatar {
+}
+.author-avatar img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.half-circle {
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	width: 60px;
+	height: 48px;
+	fill: none;
+	stroke: orange;
+	stroke-width: 8;
+	stroke-linecap: round;
+	pointer-events: none;
+}
+.author-name {
+	font-size: 20px;
+}
+.author-name-prefix {
+	color: rgb(109, 108, 108);
+	margin-bottom: 0.5rem;
+}
+.tags {
+}
+.cart-header h2:hover {
+	background: linear-gradient(90deg, yellow, rgb(255, 13, 0));
+	text-shadow: none;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
